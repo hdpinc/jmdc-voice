@@ -1,3 +1,5 @@
+/* stylelint-disable no-descending-specificity */
+
 /*
   Util
 */
@@ -17,12 +19,16 @@ $color-deep-green: #2b6f3c;
   transition: all .2s;
 }
 
+@mixin opacity {
+  opacity: .7;
+}
+
 @mixin title {
   color: $color-pure-black;
-  border-bottom: 0;
+  border-bottom: none;
 
   &::after {
-    border-bottom: 0;
+    border-bottom: none;
   }
 
   > a {
@@ -84,33 +90,31 @@ $color-deep-green: #2b6f3c;
 
   .navbar{
     margin-bottom: 56px;
-    border-bottom: 0;
+    border-bottom: none;
 
-    .navbar-inner {
-      .navbar-list{
-        display: flex;
-        justify-content: flex-end;
-        width: 100%;
-        margin-right: -16px;
+    .navbar-list{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: -16px;
 
-        li {
-          margin-left: 8px;
+      li {
+        margin-left: 8px;
 
-          a{
-            @include font-size-in-rem-from-px(18);
-            @include transition;
+        a{
+          @include font-size-in-rem-from-px(18);
+          @include transition;
 
-            height: auto;
-            padding: 16px;
-            line-height: 1;
-            color: $color-pure-black;
+          height: auto;
+          padding: 16px;
+          line-height: 1;
+          color: $color-pure-black;
 
-            &:hover {
-              color: $color-medium-green;
+          &:hover {
+            color: $color-medium-green;
 
-              &::after{
-                background-color: transparent;
-              }
+            &::after{
+              background-color: transparent;
             }
           }
         }
@@ -152,7 +156,7 @@ $color-deep-green: #2b6f3c;
 
         &:hover {
           img {
-            opacity: .8;
+            @include opacity;
           }
         }
       }
@@ -240,6 +244,26 @@ $color-deep-green: #2b6f3c;
 
         a {
           @include category-tag
+        }
+      }
+    }
+  }
+
+  .hatena-module-banner {
+    .hatena-urllist {
+      li {
+        padding-bottom: 0;
+        background-color: $color-pure-white;
+        border-bottom: none;
+
+        img {
+          @include transition;
+
+          vertical-align: bottom;
+
+          &:hover {
+            @include opacity;
+          }
         }
       }
     }

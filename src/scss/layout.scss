@@ -112,4 +112,21 @@
       }
     }
   }
+
+  .recent-entries {
+    .recent-entries-item {
+      border-bottom: none;
+
+      .recent-entries-image {
+        margin-right: 14px;
+        margin-bottom: 0;
+      }
+
+      .recent-entries-title-link {
+        @include mixin.font-size-in-rem-from-px(15);
+
+        line-height: 1.6;
+      }
+    }
+  }
 }

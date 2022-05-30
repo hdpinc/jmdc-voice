@@ -1,6 +1,12 @@
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/scss/layout.scss ***!
   \*****************************************************************************************************************************************************************************************************************/
+/*
+  Utils
+*/
+/*
+  UI parts
+*/
 /* stylelint-disable no-descending-specificity */
 /*
   Common
@@ -108,6 +114,12 @@
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/scss/top.scss ***!
   \**************************************************************************************************************************************************************************************************************/
+/*
+  Utils
+*/
+/*
+  UI parts
+*/
 /* stylelint-disable no-descending-specificity */
 /*
   top
@@ -208,4 +220,75 @@
 }
 #main .urllist-read-more-btn:hover::after {
   background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132635.png");
+}
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/scss/archive.scss ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*
+  Utils
+*/
+/*
+  UI parts
+*/
+#main .archive-heading {
+  color: #000;
+  border-bottom: none;
+  font-size: 2rem;
+  margin-top: 0;
+  line-height: 1.2;
+  color: #2b6f3c;
+}
+#main .archive-heading::after {
+  border-bottom: none;
+}
+#main .archive-heading > a {
+  color: #000;
+}
+#main .archive-entries .archive-date {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  color: #777;
+  margin-bottom: 8px;
+}
+#main .archive-entries .entry-title {
+  color: #000;
+  border-bottom: none;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+#main .archive-entries .entry-title::after {
+  border-bottom: none;
+}
+#main .archive-entries .entry-title > a {
+  color: #000;
+}
+#main .archive-entries .categories {
+  margin-bottom: 16px;
+}
+#main .archive-entries .categories .archive-category-link {
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  line-height: 1;
+  color: #fafafa;
+  background-color: #45b038;
+  border: 1px solid #45b038;
+  border-radius: 2px;
+  margin: 0;
+}
+#main .archive-entries .categories .archive-category-link:hover {
+  color: #45b038;
+  text-decoration: none;
+  background-color: transparent;
+}
+#main .archive-entries .entry-thumb {
+  margin-right: 16px;
+}
+#main .archive-entries .entry-description {
+  font-size: 0.875rem;
+  line-height: 1.5;
 }

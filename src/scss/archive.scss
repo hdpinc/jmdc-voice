@@ -1,0 +1,48 @@
+@use "color";
+@use "mixin";
+
+#main {
+  .archive-heading {
+    @include mixin.reset-title;
+    @include mixin.font-size-in-rem-from-px(32);
+
+    margin-top: 0;
+    line-height: 1.2;
+    color: color.$color-deep-green;
+  }
+
+  .archive-entries {
+    .archive-date {
+      @include mixin.entries-list-date;
+
+      margin-bottom: 8px;
+    }
+
+    .entry-title {
+      @include mixin.entries-list-title;
+
+      margin-bottom: 8px;
+    }
+
+    .categories {
+      margin-bottom: 16px;
+
+      .archive-category-link {
+        @include mixin.category-tag;
+
+        margin: 0;
+      }
+    }
+
+    .entry-thumb {
+      margin-right: 16px;
+    }
+
+
+    .entry-description {
+      @include mixin.font-size-in-rem-from-px(14);
+
+      line-height: 1.5  ;
+    }
+  }
+}

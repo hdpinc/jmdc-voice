@@ -7,7 +7,7 @@
 */
 #main {
   .hatena-module-title {
-    @include mixin.title;
+    @include mixin.reset-title;
     @include mixin.font-size-in-rem-from-px(26);
 
     a {
@@ -40,17 +40,11 @@
       }
 
       .recent-entries-date-link {
-        @include mixin.font-size-in-rem-from-px(14);
-
-        line-height: 1.2;
-        color: color.$color-deep-gray;
+        @include mixin.entries-list-date;
       }
 
       .recent-entries-title {
-        @include mixin.title;
-        @include mixin.font-size-in-rem-from-px(18);
-
-        line-height: 1.5;
+        @include mixin.entries-list-title;
       }
 
       .recent-entries-category-link {

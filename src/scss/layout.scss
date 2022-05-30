@@ -73,7 +73,7 @@
 */
 #box2 {
   .hatena-module-title {
-    @include mixin.title;
+    @include mixin.reset-title;
     @include mixin.font-size-in-rem-from-px(20);
   }
 

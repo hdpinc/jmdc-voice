@@ -1,5 +1,8 @@
 @use "color";
 
+/*
+  Utils
+*/
 @mixin font-size-in-rem-from-px($size) {
   font-size: ($size / 16) + rem
 }
@@ -12,7 +15,7 @@
   opacity: .7;
 }
 
-@mixin title {
+@mixin reset-title {
   color: color.$color-pure-black;
   border-bottom: none;
 
@@ -23,6 +26,24 @@
   > a {
     color: color.$color-pure-black;
   }
+}
+
+/*
+  UI parts
+*/
+
+@mixin entries-list-date {
+  @include font-size-in-rem-from-px(14);
+
+  line-height: 1.2;
+  color: color.$color-deep-gray;
+}
+
+@mixin entries-list-title {
+  @include reset-title;
+  @include font-size-in-rem-from-px(18);
+
+  line-height: 1.5;
 }
 
 @mixin category-tag {

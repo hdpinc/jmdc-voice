@@ -1,0 +1,47 @@
+@use "color";
+
+@mixin font-size-in-rem-from-px($size) {
+  font-size: ($size / 16) + rem
+}
+
+@mixin transition {
+  transition: all .2s;
+}
+
+@mixin opacity {
+  opacity: .7;
+}
+
+@mixin title {
+  color: color.$color-pure-black;
+  border-bottom: none;
+
+  &::after {
+    border-bottom: none;
+  }
+
+  > a {
+    color: color.$color-pure-black;
+  }
+}
+
+@mixin category-tag {
+  @include font-size-in-rem-from-px(14);
+  @include transition;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  line-height: 1;
+  color: color.$color-light-gray;
+  background-color: color.$color-light-green;
+  border: 1px solid color.$color-light-green;
+  border-radius: 2px;
+
+  &:hover {
+    color: color.$color-light-green;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}

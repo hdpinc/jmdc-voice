@@ -1,0 +1,102 @@
+/* stylelint-disable no-descending-specificity */
+@use "color";
+@use "mixin";
+
+/*
+  top
+*/
+#main {
+  .hatena-module-title {
+    @include mixin.title;
+    @include mixin.font-size-in-rem-from-px(26);
+
+    a {
+      color: color.$color-pure-black;
+    }
+  }
+
+  .recent-entries-item {
+    border-bottom: none;
+
+    .recent-entries-item-inner {
+      > * {
+        display: block;
+
+        &:not(:first-child){
+          margin-top: 8px;
+        }
+      }
+
+      .recent-entries-image-link {
+        img {
+          @include mixin.transition;
+        }
+
+        &:hover {
+          img {
+            @include mixin.opacity;
+          }
+        }
+      }
+
+      .recent-entries-date-link {
+        @include mixin.font-size-in-rem-from-px(14);
+
+        line-height: 1.2;
+        color: color.$color-deep-gray;
+      }
+
+      .recent-entries-title {
+        @include mixin.title;
+        @include mixin.font-size-in-rem-from-px(18);
+
+        line-height: 1.5;
+      }
+
+      .recent-entries-category-link {
+        @include mixin.category-tag;
+      }
+
+      .recent-entries-entry-body{
+        display: none;
+      }
+    }
+
+  }
+
+  .urllist-read-more-btn {
+    @include mixin.font-size-in-rem-from-px(16);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    line-height: 1;
+    color: color.$color-pure-black;
+    background-color: color.$color-pure-white;
+    border: 1px solid color.$color-pure-black;
+    border-radius: 36px;
+
+    &::after {
+      @include mixin.transition;
+
+      top: 1em;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      content: "";
+      background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132627.png");
+      background-size: contain;
+    }
+
+    &:hover {
+      color: color.$color-medium-green;
+      border-color: color.$color-medium-green;
+
+      &::after {
+        background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132635.png");
+      }
+    }
+  }
+}

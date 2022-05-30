@@ -1,0 +1,115 @@
+/* stylelint-disable no-descending-specificity */
+@use "color";
+@use "mixin";
+
+/*
+  Common
+*/
+#container {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+
+/*
+  Header
+*/
+#top-editarea {
+  .blog-title {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .blog-title-heading {
+      // 画像差し替え後調整
+      max-width: 537px;
+      margin: 0;
+    }
+
+    .blog-description {
+      @include mixin.font-size-in-rem-from-px(18);
+
+      color: color.$color-deep-green;
+    }
+  }
+
+  .navbar{
+    margin-bottom: 56px;
+    border-bottom: none;
+
+    .navbar-list{
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      margin-right: -16px;
+
+      li {
+        margin-left: 8px;
+
+        a{
+          @include mixin.font-size-in-rem-from-px(18);
+          @include mixin.transition;
+
+          height: auto;
+          padding: 16px;
+          line-height: 1;
+          color: color.$color-pure-black;
+
+          &:hover {
+            color: color.$color-medium-green;
+
+            &::after{
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*
+  Side Bar
+*/
+#box2 {
+  .hatena-module-title {
+    @include mixin.title;
+    @include mixin.font-size-in-rem-from-px(20);
+  }
+
+  .hatena-module-category {
+    .hatena-urllist {
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: 16px;
+        margin-bottom: 16px;
+
+        a {
+          @include mixin.category-tag
+        }
+      }
+    }
+  }
+
+  .hatena-module-banner {
+    .hatena-urllist {
+      li {
+        padding-bottom: 0;
+        background-color: color.$color-pure-white;
+        border-bottom: none;
+
+        img {
+          @include mixin.transition;
+
+          vertical-align: bottom;
+
+          &:hover {
+            @include mixin.opacity;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,13 +10,23 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/scss/style.scss":
-/*!*****************************!*\
-  !*** ./src/scss/style.scss ***!
-  \*****************************/
+/***/ "./src/scss/layout.scss":
+/*!******************************!*\
+  !*** ./src/scss/layout.scss ***!
+  \******************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://jmdcchr/./src/scss/style.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://jmdcchr/./src/scss/layout.scss?");
+
+/***/ }),
+
+/***/ "./src/scss/top.scss":
+/*!***************************!*\
+  !*** ./src/scss/top.scss ***!
+  \***************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://jmdcchr/./src/scss/top.scss?");
 
 /***/ }),
 
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\n\n\n\n//# sourceURL=webpack://jmdcchr/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/layout.scss */ \"./src/scss/layout.scss\");\n/* harmony import */ var _scss_top_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/top.scss */ \"./src/scss/top.scss\");\n\n\n\n//# sourceURL=webpack://jmdcchr/./src/index.js?");
 
 /***/ })
 

@@ -24,6 +24,7 @@
     "style-loader": "^3.3.1",
     "stylelint": "^14.8.2",
     "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-recess-order": "^3.0.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2",

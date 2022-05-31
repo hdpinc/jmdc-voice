@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 @use "color";
 @use "mixin";
+@use "breakpoints";
 
 /*
   Common
@@ -37,22 +38,45 @@
     border-bottom: none;
 
     .navbar-list{
-      display: flex;
-      justify-content: flex-end;
-      width: 100%;
-      margin-right: -16px;
+      @include breakpoints.mq(sm) {
+        width: 100%;
+      }
+      @include breakpoints.mq(lg) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      @include breakpoints.mq(xl) {
+        margin-right: -16px;
+      }
 
       li {
-        margin-left: 8px;
+
+        @include breakpoints.mq(xl) {
+          margin-left: 8px;
+        }
 
         a{
-          @include mixin.font-size-in-rem-from-px(18);
           @include mixin.transition;
 
-          height: auto;
-          padding: 16px;
-          line-height: 1;
           color: color.$color-pure-black;
+
+          @include breakpoints.mq(md) {
+            @include mixin.font-size-in-rem-from-px(14);
+
+            height: auto;
+            padding: 10px;
+            line-height: 1;
+          }
+          @include breakpoints.mq(lg) {
+            @include mixin.font-size-in-rem-from-px(16);
+
+            padding: 14px;
+          }
+          @include breakpoints.mq(xl) {
+            @include mixin.font-size-in-rem-from-px(18);
+
+            padding: 16px;
+          }
 
           &:hover {
             color: color.$color-medium-green;
@@ -62,6 +86,12 @@
             }
           }
         }
+      }
+    }
+
+    .navbar-toggle-btn-icon  {
+      line {
+        stroke: color.$color-medium-green;
       }
     }
   }

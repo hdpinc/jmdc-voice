@@ -35,28 +35,59 @@
   margin-bottom: 56px;
   border-bottom: none;
 }
-#top-editarea .navbar .navbar-list {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  margin-right: -16px;
+@media (min-width: 576px) {
+  #top-editarea .navbar .navbar-list {
+    width: 100%;
+  }
 }
-#top-editarea .navbar .navbar-list li {
-  margin-left: 8px;
+@media (min-width: 992px) {
+  #top-editarea .navbar .navbar-list {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  #top-editarea .navbar .navbar-list {
+    margin-right: -16px;
+  }
+}
+@media (min-width: 1200px) {
+  #top-editarea .navbar .navbar-list li {
+    margin-left: 8px;
+  }
 }
 #top-editarea .navbar .navbar-list li a {
-  font-size: 1.125rem;
   transition: all 0.2s;
-  height: auto;
-  padding: 16px;
-  line-height: 1;
   color: #000;
+}
+@media (min-width: 768px) {
+  #top-editarea .navbar .navbar-list li a {
+    font-size: 0.875rem;
+    height: auto;
+    padding: 10px;
+    line-height: 1;
+  }
+}
+@media (min-width: 992px) {
+  #top-editarea .navbar .navbar-list li a {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+@media (min-width: 1200px) {
+  #top-editarea .navbar .navbar-list li a {
+    font-size: 1.125rem;
+    padding: 16px;
+  }
 }
 #top-editarea .navbar .navbar-list li a:hover {
   color: #18a93c;
 }
 #top-editarea .navbar .navbar-list li a:hover::after {
   background-color: transparent;
+}
+#top-editarea .navbar .navbar-toggle-btn-icon line {
+  stroke: #18a93c;
 }
 
 /*

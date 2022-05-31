@@ -1,6 +1,4 @@
 const PATH = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const HtmlWebpackHarddiskPlugin = require("html-webpack-harddisk-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 
@@ -51,22 +49,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "./src/index.html",
-      alwaysWriteToDisk: true,
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./archive.html",
-      template: "./src/archive.html",
-      alwaysWriteToDisk: true,
-    }),
-    new HtmlWebpackPlugin({
-      filename: "./entry.html",
-      template: "./src/entry.html",
-      alwaysWriteToDisk: true,
-    }),
-    new HtmlWebpackHarddiskPlugin(),
     new MiniCssExtractPlugin({
       filename: "./css/style.css",
     }),

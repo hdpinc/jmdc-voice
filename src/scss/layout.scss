@@ -21,15 +21,25 @@
     justify-content: space-between;
 
     .blog-title-heading {
-      // 画像差し替え後調整
-      max-width: 537px;
-      margin: 0;
+      width: 60%;
+
+      @include breakpoints.mq(sm) {
+        max-width: 537px;  // 画像差し替え後調整
+        margin: 0;
+      }
     }
 
     .blog-description {
-      @include mixin.font-size-in-rem-from-px(18);
-
+      flex-shrink: 0;
+      margin-left: 8em;
       color: color.$color-deep-green;
+
+      @include breakpoints.mq(lg) {
+        @include mixin.font-size-in-rem-from-px(16);
+      }
+      @include breakpoints.mq(xl) {
+        @include mixin.font-size-in-rem-from-px(18);
+      }
     }
   }
 

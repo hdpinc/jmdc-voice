@@ -45,16 +45,30 @@
         }
       }
 
+      .entry-thumb-link {
+        display: block;
+
+        @include breakpoints.mq(md) {
+          width: 180px;
+        }
+      }
+
       .entry-thumb {
-        margin-bottom: 16px;
+        @include mixin.transition;
+
+        width: 100%;
+        padding-top: 56.25%;
 
         @include breakpoints.mq(xs) {
-          width: 100%;
-          padding-top: 56.25%;
+          margin-bottom: 16px;
         }
 
         @include breakpoints.mq(sm) {
           margin-right: 16px;
+        }
+
+        &:hover {
+          @include mixin.opacity;
         }
       }
 

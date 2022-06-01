@@ -30,7 +30,7 @@
         width: 60%;
 
         @include breakpoints.mq(sm) {
-          max-width: 537px;  // 画像差し替え後調整
+          max-width: 517px;  // 画像差し替え後調整
           margin: 0;
         }
       }
@@ -173,8 +173,14 @@
       border-bottom: none;
 
       .recent-entries-image {
+        @include mixin.transition;
+
         margin-right: 14px;
         margin-bottom: 0;
+
+        &:hover {
+          @include mixin.opacity;
+        }
       }
 
       .recent-entries-title-link {

@@ -16,6 +16,7 @@
 }
 
 @mixin reset-title {
+  padding-bottom: 0;
   color: color.$color-pure-black;
   border-bottom: none;
 
@@ -32,18 +33,11 @@
   UI parts
 */
 
-@mixin entries-list-date {
+@mixin date {
   @include font-size-in-rem-from-px(14);
 
   line-height: 1.2;
   color: color.$color-deep-gray;
-}
-
-@mixin entries-list-title {
-  @include reset-title;
-  @include font-size-in-rem-from-px(18);
-
-  line-height: 1.5;
 }
 
 @mixin category-tag {
@@ -65,4 +59,26 @@
     text-decoration: none;
     background-color: transparent;
   }
+}
+
+@mixin entries-list-title {
+  @include reset-title;
+  @include font-size-in-rem-from-px(18);
+
+  line-height: 1.5;
+}
+
+@mixin pager-button {
+  @include font-size-in-rem-from-px(16);
+  @include transition;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  line-height: 1;
+  color: color.$color-pure-black;
+  background-color: color.$color-pure-white;
+  border: 1px solid color.$color-pure-black;
+  border-radius: 36px;
 }

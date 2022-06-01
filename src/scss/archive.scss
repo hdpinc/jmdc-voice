@@ -1,48 +1,74 @@
 @use "color";
 @use "mixin";
+@use "breakpoints";
 
 #main {
-  .archive-heading {
-    @include mixin.reset-title;
-    @include mixin.font-size-in-rem-from-px(32);
+  .archive-header-category {
+    margin-bottom: 2rem;
 
-    margin-top: 0;
-    line-height: 1.2;
-    color: color.$color-deep-green;
+    .archive-heading {
+      @include mixin.reset-title;
+
+      @include breakpoints.mq(lg){
+        @include mixin.font-size-in-rem-from-px(32);
+      }
+
+      margin-top: 0;
+      line-height: 1.2;
+      color: color.$color-deep-green;
+    }
   }
 
   .archive-entries {
-    .archive-date {
-      @include mixin.entries-list-date;
+    .archive-entry {
+      margin-bottom: 3rem;
 
-      margin-bottom: 8px;
-    }
+      .archive-date {
+        @include mixin.date;
 
-    .entry-title {
-      @include mixin.entries-list-title;
+        margin-bottom: 8px;
+      }
 
-      margin-bottom: 8px;
-    }
+      .entry-title {
+        @include mixin.entries-list-title;
 
-    .categories {
-      margin-bottom: 16px;
+        margin-bottom: 8px;
+      }
 
-      .archive-category-link {
-        @include mixin.category-tag;
+      .categories {
+        margin-bottom: 16px;
 
-        margin: 0;
+        .archive-category-link {
+          @include mixin.category-tag;
+
+          margin: 0;
+        }
+      }
+
+      .entry-thumb {
+        margin-bottom: 16px;
+
+        @include breakpoints.mq(xs) {
+          width: 100%;
+          padding-top: 56.25%;
+        }
+
+        @include breakpoints.mq(sm) {
+          margin-right: 16px;
+        }
+      }
+
+
+      .entry-description {
+        @include mixin.font-size-in-rem-from-px(14);
+
+        line-height: 1.5  ;
+      }
+
+      .social-buttons {
+        display: none;
       }
     }
 
-    .entry-thumb {
-      margin-right: 16px;
-    }
-
-
-    .entry-description {
-      @include mixin.font-size-in-rem-from-px(14);
-
-      line-height: 1.5  ;
-    }
   }
 }

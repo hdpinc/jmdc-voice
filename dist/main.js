@@ -20,6 +20,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./src/scss/entry.scss":
+/*!*****************************!*\
+  !*** ./src/scss/entry.scss ***!
+  \*****************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://jmdcchr/./src/scss/entry.scss?");
+
+/***/ }),
+
 /***/ "./src/scss/layout.scss":
 /*!******************************!*\
   !*** ./src/scss/layout.scss ***!
@@ -46,7 +56,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \**********************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/layout.scss */ \"./src/scss/layout.scss\");\n/* harmony import */ var _scss_top_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/top.scss */ \"./src/scss/top.scss\");\n/* harmony import */ var _scss_archive_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/archive.scss */ \"./src/scss/archive.scss\");\n\n\n\n\n//# sourceURL=webpack://jmdcchr/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_layout_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/layout.scss */ \"./src/scss/layout.scss\");\n/* harmony import */ var _scss_top_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scss/top.scss */ \"./src/scss/top.scss\");\n/* harmony import */ var _scss_archive_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scss/archive.scss */ \"./src/scss/archive.scss\");\n/* harmony import */ var _scss_entry_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scss/entry.scss */ \"./src/scss/entry.scss\");\n\n\n\n\n\n//# sourceURL=webpack://jmdcchr/./src/index.js?");
 
 /***/ })
 

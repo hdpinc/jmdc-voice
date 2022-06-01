@@ -1,6 +1,7 @@
 /* stylelint-disable no-descending-specificity */
 @use "color";
 @use "mixin";
+@use "breakpoints";
 
 /*
   top
@@ -8,7 +9,14 @@
 #main {
   .hatena-module-title {
     @include mixin.reset-title;
-    @include mixin.font-size-in-rem-from-px(26);
+
+    @include breakpoints.mq(xs) {
+      margin-bottom: 2em;
+    }
+
+    @include breakpoints.mq(lg) {
+      @include mixin.font-size-in-rem-from-px(26);
+    }
 
     a {
       color: color.$color-pure-black;
@@ -16,6 +24,7 @@
   }
 
   .recent-entries-item {
+    margin-bottom: 2rem;
     border-bottom: none;
 
     .recent-entries-item-inner {
@@ -30,6 +39,13 @@
       .recent-entries-image-link {
         img {
           @include mixin.transition;
+
+          vertical-align: bottom;
+
+          @include breakpoints.mq(xs) {
+            float: none;
+            width: 100%;
+            max-width: 100%;          }
         }
 
         &:hover {
@@ -40,7 +56,9 @@
       }
 
       .recent-entries-date-link {
-        @include mixin.entries-list-date;
+        @include mixin.date;
+
+        margin-top: 16px;
       }
 
       .recent-entries-title {
@@ -59,17 +77,7 @@
   }
 
   .urllist-read-more-btn {
-    @include mixin.font-size-in-rem-from-px(16);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1em;
-    line-height: 1;
-    color: color.$color-pure-black;
-    background-color: color.$color-pure-white;
-    border: 1px solid color.$color-pure-black;
-    border-radius: 36px;
+    @include mixin.pager-button;
 
     &::after {
       @include mixin.transition;

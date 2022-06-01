@@ -15,37 +15,47 @@
   Header
 */
 #top-editarea {
-  .blog-title {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-
-    .blog-title-heading {
-      width: 60%;
-
-      @include breakpoints.mq(sm) {
-        max-width: 537px;  // 画像差し替え後調整
-        margin: 0;
-      }
+  .blog-header-inner {
+    @include breakpoints.mq(xs) {
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
 
-    .blog-description {
-      flex-shrink: 0;
-      margin-left: 8em;
-      color: color.$color-deep-green;
+    .blog-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
 
-      @include breakpoints.mq(lg) {
-        @include mixin.font-size-in-rem-from-px(16);
+      .blog-title-heading {
+        width: 60%;
+
+        @include breakpoints.mq(sm) {
+          max-width: 537px;  // 画像差し替え後調整
+          margin: 0;
+        }
       }
-      @include breakpoints.mq(xl) {
-        @include mixin.font-size-in-rem-from-px(18);
+
+      .blog-description {
+        flex-shrink: 0;
+        margin-left: 8em;
+        color: color.$color-deep-green;
+
+        @include breakpoints.mq(lg) {
+          @include mixin.font-size-in-rem-from-px(16);
+        }
+        @include breakpoints.mq(xl) {
+          @include mixin.font-size-in-rem-from-px(18);
+        }
       }
     }
   }
 
   .navbar{
-    margin-bottom: 56px;
     border-bottom: none;
+
+    @include breakpoints.mq(lg) {
+      margin-bottom: 56px;
+    }
 
     .navbar-list{
       @include breakpoints.mq(sm) {
@@ -112,6 +122,11 @@
   Side Bar
 */
 #box2 {
+  @media (max-width: 767px) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+
   .hatena-module-title {
     @include mixin.reset-title;
     @include mixin.font-size-in-rem-from-px(20);

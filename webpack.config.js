@@ -1,9 +1,10 @@
 const PATH = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 
 module.exports = {
-  mode: "development",
+  mode: process.env.NODE_ENV,
   entry: {
     main: "./src/index.js",
   },
@@ -46,6 +47,11 @@ module.exports = {
           },
         ],
       },
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
     ],
   },
   plugins: [

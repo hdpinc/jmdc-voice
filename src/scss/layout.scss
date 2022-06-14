@@ -123,10 +123,10 @@
 */
 
 // Common
-.hatena-module-entries-access-ranking,
 .hatena-module-category,
 .hatena-module-html,
-.hatena-module-recent-entries {
+.hatena-module-recent-entries,
+.hatena-module-entries-access-ranking {
   .hatena-module-title {
     @include mixin.reset-title;
     @include mixin.font-size-in-rem-from-px(20);
@@ -177,11 +177,12 @@
   }
 }
 
-.hatena-module-recent-entries {
-  .recent-entries-item {
+.hatena-module-recent-entries,
+.hatena-module-entries-access-ranking {
+  .urllist-item {
     border-bottom: none;
 
-    .recent-entries-image {
+    .urllist-image {
       @include mixin.transition;
 
       margin-right: 14px;
@@ -192,7 +193,7 @@
       }
     }
 
-    .recent-entries-title-link {
+    .urllist-title-link {
       @include mixin.font-size-in-rem-from-px(15);
 
       line-height: 1.6;
@@ -206,9 +207,4 @@
     width: calc(100% + 20px);
     margin-left: -10px;
   }
-}
-
-// SP Only
-.navbar {
-  margin-bottom: 0;
 }

@@ -2,87 +2,85 @@
 @use "mixin";
 @use "breakpoints";
 
-#main {
-  .archive-header-category {
-    margin-bottom: 2rem;
+.archive-header-category {
+  margin-bottom: 2rem;
 
-    .archive-heading {
-      @include mixin.reset-title;
+  .archive-heading {
+    @include mixin.reset-title;
 
-      @include breakpoints.mq(lg){
-        @include mixin.font-size-in-rem-from-px(32);
-      }
-
-      margin-top: 0;
-      line-height: 1.2;
-      color: color.$color-deep-green;
+    @include breakpoints.mq(lg){
+      @include mixin.font-size-in-rem-from-px(32);
     }
+
+    margin-top: 0;
+    line-height: 1.2;
+    color: color.$color-deep-green;
   }
+}
 
-  .archive-entries {
-    .archive-entry {
-      margin-bottom: 3rem;
+.archive-entries {
+  .archive-entry {
+    margin-bottom: 3rem;
 
-      .archive-date {
-        @include mixin.date;
+    .archive-date {
+      @include mixin.date;
 
-        margin-bottom: 8px;
+      margin-bottom: 8px;
+    }
+
+    .entry-title {
+      @include mixin.entries-list-title;
+
+      margin-bottom: 8px;
+    }
+
+    .categories {
+      margin-bottom: 16px;
+
+      .archive-category-link {
+        @include mixin.category-tag;
+
+        margin: 0;
       }
+    }
 
-      .entry-title {
-        @include mixin.entries-list-title;
+    .entry-thumb-link {
+      display: block;
 
-        margin-bottom: 8px;
+      @include breakpoints.mq(md) {
+        width: 180px;
       }
+    }
 
-      .categories {
+    .entry-thumb {
+      @include mixin.transition;
+
+      width: 100%;
+      padding-top: 56.25%;
+
+      @include breakpoints.mq(xs) {
         margin-bottom: 16px;
-
-        .archive-category-link {
-          @include mixin.category-tag;
-
-          margin: 0;
-        }
       }
 
-      .entry-thumb-link {
-        display: block;
-
-        @include breakpoints.mq(md) {
-          width: 180px;
-        }
+      @include breakpoints.mq(sm) {
+        margin-right: 16px;
       }
 
-      .entry-thumb {
-        @include mixin.transition;
-
-        width: 100%;
-        padding-top: 56.25%;
-
-        @include breakpoints.mq(xs) {
-          margin-bottom: 16px;
-        }
-
-        @include breakpoints.mq(sm) {
-          margin-right: 16px;
-        }
-
-        &:hover {
-          @include mixin.opacity;
-        }
-      }
-
-
-      .entry-description {
-        @include mixin.font-size-in-rem-from-px(14);
-
-        line-height: 1.5  ;
-      }
-
-      .social-buttons {
-        display: none;
+      &:hover {
+        @include mixin.opacity;
       }
     }
 
+
+    .entry-description {
+      @include mixin.font-size-in-rem-from-px(14);
+
+      line-height: 1.5  ;
+    }
+
+    .social-buttons {
+      display: none;
+    }
   }
+
 }

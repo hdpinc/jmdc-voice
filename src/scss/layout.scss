@@ -123,16 +123,19 @@
 */
 
 // Common
-.hatena-module-category,
-.hatena-module-html,
-.hatena-module-recent-entries,
-.hatena-module-entries-access-ranking {
-  .hatena-module-title {
-    @include mixin.reset-title;
-    @include mixin.font-size-in-rem-from-px(20);
+#box2,
+#footer-modules,
+#top-page-header-modules {
+  .hatena-module-category,
+  .hatena-module-html,
+  .hatena-module-recent-entries,
+  .hatena-module-entries-access-ranking {
+    .hatena-module-title {
+      @include mixin.reset-title;
+      @include mixin.font-size-in-rem-from-px(20);
+    }
   }
 }
-
 
 .hatena-module-category {
   .hatena-urllist {

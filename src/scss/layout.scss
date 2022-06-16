@@ -3,10 +3,10 @@
 @use "mixin";
 @use "breakpoints";
 
-/*
-  Common
-*/
+
 #container {
+  // GoogleFontsの読み込みは、Hatenaブログ管理画面の 設定 > 詳細設定 > head内タグ > <head>要素にメタデータを追加
+  // にlinkタグを貼り付けて設定しています。
   font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -121,73 +121,93 @@
 /*
   Side Bar
 */
-#box2 {
-  @media (max-width: 767px) {
-    width: calc(100% + 20px);
-    margin-left: -10px;
+
+// Common
+#box2,
+#footer-modules,
+#top-page-header-modules {
+  .hatena-module-category,
+  .hatena-module-html,
+  .hatena-module-recent-entries,
+  .hatena-module-entries-access-ranking {
+    .hatena-module-title {
+      @include mixin.reset-title;
+      @include mixin.font-size-in-rem-from-px(20);
+    }
   }
+}
 
-  .hatena-module-title {
-    @include mixin.reset-title;
-    @include mixin.font-size-in-rem-from-px(20);
-  }
+.hatena-module-category {
+  .hatena-urllist {
+    display: flex;
+    flex-wrap: wrap;
 
-  .hatena-module-category {
-    .hatena-urllist {
-      display: flex;
-      flex-wrap: wrap;
+    li {
+      padding: 0;
+      margin-right: 16px;
+      margin-bottom: 16px;
 
-      li {
-        margin-right: 16px;
-        margin-bottom: 16px;
-
-        a {
-          @include mixin.category-tag
+      @include breakpoints.mq(xs) {
+        margin-right: 8px;
+        margin-bottom: 8px;
         }
+
+      a {
+        @include mixin.category-tag
       }
     }
   }
+}
 
-  .hatena-module-banner {
-    .hatena-urllist {
-      li {
-        padding-bottom: 0;
-        background-color: color.$color-pure-white;
-        border-bottom: none;
-
-        img {
-          @include mixin.transition;
-
-          vertical-align: bottom;
-
-          &:hover {
-            @include mixin.opacity;
-          }
-        }
-      }
-    }
-  }
-
-  .recent-entries {
-    .recent-entries-item {
+.hatena-module-banner {
+  .hatena-urllist {
+    li {
+      padding-bottom: 0;
+      background-color: color.$color-pure-white;
       border-bottom: none;
 
-      .recent-entries-image {
+      img {
         @include mixin.transition;
 
-        margin-right: 14px;
-        margin-bottom: 0;
+        width: 100%;
+        vertical-align: bottom;
 
         &:hover {
           @include mixin.opacity;
         }
       }
+    }
+  }
+}
 
-      .recent-entries-title-link {
-        @include mixin.font-size-in-rem-from-px(15);
+.hatena-module-recent-entries,
+.hatena-module-entries-access-ranking {
+  .urllist-item {
+    border-bottom: none;
 
-        line-height: 1.6;
+    .urllist-image {
+      @include mixin.transition;
+
+      margin-right: 14px;
+      margin-bottom: 0;
+
+      &:hover {
+        @include mixin.opacity;
       }
     }
+
+    .urllist-title-link {
+      @include mixin.font-size-in-rem-from-px(15);
+
+      line-height: 1.6;
+    }
+  }
+}
+
+// PC Only
+#box2 {
+  @media (max-width: 767px) {
+    width: calc(100% + 20px);
+    margin-left: -10px;
   }
 }

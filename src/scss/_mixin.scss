@@ -3,8 +3,12 @@
 /*
   Utils
 */
-@mixin font-size-in-rem-from-px($size) {
-  font-size: ($size / 16) + rem
+@function if-important($important){
+  @return #{if($important, '!important', '')};
+}
+
+@mixin font-size-in-rem-from-px($size, $important: false) {
+  font-size: ($size / 16) + rem if-important($important);
 }
 
 @mixin transition {

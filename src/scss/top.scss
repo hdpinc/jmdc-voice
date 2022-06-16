@@ -79,30 +79,45 @@
   }
 }
 
-.urllist-see-more-link,
-.urllist-read-more-btn {
-  @include mixin.pager-button;
-
-  &::after {
-    @include mixin.transition;
-
-    top: 1em;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-left: 8px;
-    content: "";
-    background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132627.png");
-    background-size: contain;
-  }
-
-  &:hover {
-    color: color.$color-medium-green;
-    background-color: transparent;
-    border-color: color.$color-medium-green;
+.urllist-see-more,
+.urllist-read-more {
+  .urllist-see-more-link,
+  .urllist-read-more-btn {
+    @include mixin.pager-button;
 
     &::after {
-      background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132635.png");
+      @include mixin.transition;
+
+      top: 1em;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-left: 8px;
+      content: "";
+      background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132627.png");
+      background-size: contain;
+    }
+
+    &:hover {
+      color: color.$color-medium-green;
+      background-color: transparent;
+      border-color: color.$color-medium-green;
+
+      &::after {
+        background-image: url("https://cdn-ak.f.st-hatena.com/images/fotolife/j/jmdchr/20220530/20220530132635.png");
+      }
+    }
+  }
+}
+
+.pager {
+  .pager-next {
+    @include mixin.pager-button;
+
+    &:hover {
+      color: color.$color-medium-green;
+      background-color: transparent;
+      border-color: color.$color-medium-green;
     }
   }
 }

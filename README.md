@@ -13,6 +13,9 @@ Hatena blogでは既存のモジュールのHTMLテンプレートがカスタ�
 
 Updateの際はchromeなどのdeveloper toolでHTML要素のcssクラスを確認しながら、セレクターを上書く形でスタイリングしてください。
 
+## 事前準備
+はてなブログのアカウントを作成し、HRに編集権限を付与していただき、以下から管理画面にログインしてください。
+https://accounts.hatena.ne.jp/login
 
 ## 使い方
 ```
